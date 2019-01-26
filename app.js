@@ -34,6 +34,11 @@ app.get('/', (req, res) => {
                     year: record._fields[0].properties.year,
                 });
             });
+
+            session
+                .run()
+                .then()
+                .catch();
             res.render('index', {
                 movies: movieArray,
             });
