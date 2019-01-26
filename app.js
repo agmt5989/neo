@@ -60,7 +60,9 @@ app.get('/', (req, res) => {
         });
 });
 
-app.post('/movie/add', (req, res) => {})
+app.post('/movie/add', (req, res) => {
+    
+});
 // Setup
 app.listen(3000);
 console.log('Server started on port 3000');
