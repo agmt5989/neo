@@ -65,7 +65,7 @@ app.post('/movie/add', (req, res) => {
     let year = req.body.movie_year;
 
     session
-        .run('CREATE (n:Movie{title: {titleParam}, year: {yearParam}}) RETURN n.title', {titleParams: name, yearParam: year})
+        .run('CREATE (n:Movie{title: {titleParam}, year: {yearParam}}) RETURN n.title', {titleParam: name, yearParam: year})
         .then(() => {
             res.redirect('/');
             session.close();
