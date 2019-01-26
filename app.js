@@ -13,3 +13,4 @@ app.set('view engine', 'ejs');
 
 // Middlewares
 app.use(logger('dev'));
+app.use(bodyParser.json());
