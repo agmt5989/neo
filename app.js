@@ -24,7 +24,9 @@ const session = driver.session();
 // Routes
 app.get('/', (req, res) => {
     session
-    
+        .run()
+        .then()
+        .catch();
     res.send('It did work!!');
 });
 // Setup
