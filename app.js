@@ -43,7 +43,6 @@ app.get('/', (req, res) => {
                         actorArray.push({
                             id: record._fields[0].identity.low,
                             title: record._fields[0].properties.title,
-                            year: record._fields[0].properties.year,
                         });
 
                     });
