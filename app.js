@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
                     result1.records.forEach((record) => {
                         actorArray.push({
                             id: record._fields[0].identity.low,
-                            title: record._fields[0].properties.title,
+                            name: record._fields[0].properties.name,
                         });
 
                     });
