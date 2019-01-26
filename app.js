@@ -63,7 +63,8 @@ app.get('/', (req, res) => {
 app.post('/movie/add', (req, res) => {
     let name = req.body.title;
     let year = req.body.released;
-let tag = req.body.tag;
+    let tag = req.body.tag;
+
     session
         .run('CREATE (n:Movie{title: {titleParam}, year: {yearParam}}) RETURN n.title', {titleParam: name, yearParam: year})
         .then(() => {
