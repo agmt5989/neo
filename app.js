@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
             });
         })
         .catch(() => {
-            
+            console.log(err);
         });
     res.send('It did work!!');
 });
