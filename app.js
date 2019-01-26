@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
     session
         .run('MATCH (n:Person) return n LIMIT 25')
         .then((result) => {
+            let movieArray = [];
             result.records.forEach((record) => {
                 console.log(record._fields[0].properties);
             });
