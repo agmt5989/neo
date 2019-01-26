@@ -45,12 +45,12 @@ app.get('/', (req, res) => {
                             name: record._fields[0].properties.name,
                         });
 
+                        res.render('index', {
+                            movies: movieArray,
+                        });
                     });
                 })
                 .catch();
-            res.render('index', {
-                movies: movieArray,
-            });
         })
         .catch((err) => {
             console.log(err);
