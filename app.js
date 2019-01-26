@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/movie/add', (req, res) => {
-    let name = req.body.movie_name;
+    let name = req.body.title
     let year = req.body.title
 
     session
