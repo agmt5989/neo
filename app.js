@@ -66,7 +66,7 @@ app.post('/movie/add', (req, res) => {
     let tag = req.body.tag;
 
     session
-        .run('CREATE (n:Movie{title: {titleParam}, year: {yearParam}}) RETURN n.title', {titleParam: name, yearParam: year})
+        .run('CREATE (n:Movie{title: {titleParam}, released: {yearParam}, tagline: {tagParam}}) RETURN n.title', {titleParam: name, yearParam: year, tagParam: tag})
         .then(() => {
             res.redirect('/');
             session.close();
