@@ -1,4 +1,4 @@
-<h1>Add a Movie</h1>
+<h3>Add a Movie</h3>
 
 <form method="post" action="/movie/add">
     <label>Movie Name:<br>
@@ -12,14 +12,14 @@
     <input type="submit" value="Submit">
 </form>
 
-<h1>Movies</h1>
+<h3>Movies</h3>
 <ul>
 <% movies.forEach((movie) => { %>
 <li><%= movie.title %></li>
 <% }) %>
 </ul>
 
-<h1>Actors (and Directors)</h1>
+<h3>Actors (and Directors)</h3>
 <ul>
 <% actors.forEach((actor) => { %>
 <li><%= actor.name %></li>
