@@ -69,7 +69,9 @@ app.post('/movie/add', (req, res) => {
         .then(() => {
             res.redirect('/');
         })
-        .catch();
+        .catch((err) => {
+            console.log(err);
+        });
 
     res.redirect('/');
 });
