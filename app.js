@@ -45,10 +45,10 @@ app.get('/', (req, res) => {
                             name: rec._fields[0].properties.name,
                         });
 
-                        res.render('index', {
-                            movies: movieArray,
-                            actors: actorArray,
-                        });
+                    });
+                    res.render('index', {
+                        movies: movieArray,
+                        actors: actorArray,
                     });
                 })
                 .catch((err) => {
