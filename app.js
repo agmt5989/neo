@@ -47,6 +47,7 @@ app.get('/', (req, res) => {
 
                         res.render('index', {
                             movies: movieArray,
+                            actors: actorArray,
                         });
                     });
                 })
