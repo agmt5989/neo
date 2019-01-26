@@ -22,17 +22,17 @@ build/Release
 # Dependency directory
 # Deployed apps should consider commenting this line out:
 # see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
-!node_modules/
-node_modules/*
-!/node_modules/.registry.npmjs.org/
-/node_modules/.registry.npmjs.org/*
-!/node_modules/.registry.npmjs.org/keystone/
-/node_modules/.registry.npmjs.org/keystone/*
-!/node_modules/.registry.npmjs.org/keystone/4.0.0/
-/node_modules/.registry.npmjs.org/keystone/4.0.0/*
-!/node_modules/.registry.npmjs.org/keystone/4.0.0/node_modules/
-/node_modules/.registry.npmjs.org/keystone/4.0.0/node_modules/*
-!/node_modules/.registry.npmjs.org/keystone/4.0.0/node_modules/keystone
+node_modules/
+# node_modules/*
+# !/node_modules/.registry.npmjs.org/
+# /node_modules/.registry.npmjs.org/*
+# !/node_modules/.registry.npmjs.org/keystone/
+# /node_modules/.registry.npmjs.org/keystone/*
+# !/node_modules/.registry.npmjs.org/keystone/4.0.0/
+# /node_modules/.registry.npmjs.org/keystone/4.0.0/*
+# !/node_modules/.registry.npmjs.org/keystone/4.0.0/node_modules/
+# /node_modules/.registry.npmjs.org/keystone/4.0.0/node_modules/*
+# !/node_modules/.registry.npmjs.org/keystone/4.0.0/node_modules/keystone
 
 # Ignore .env configuration files
 .env
