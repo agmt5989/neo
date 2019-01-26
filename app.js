@@ -23,6 +23,8 @@ const session = driver.session();
 
 // Routes
 app.get('/', (req, res) => {
+    session
+    
     res.send('It did work!!');
 });
 // Setup
