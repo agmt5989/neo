@@ -26,7 +26,9 @@ app.get('/', (req, res) => {
     session
         .run('MATCH (n:Movie) return n LIMIT 25')
         .then((result) => {
-            result.records.forEach(() => {});
+            result.records.forEach((record) => {
+                console.log(record);
+            });
         })
         .catch();
     res.send('It did work!!');
