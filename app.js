@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-const driver = neo4j.driver('bolt://localhost', )
+const driver = neo4j.driver('bolt://localhost', neo4j.auth.basic)
 
 // Routes
 app.get('/', (req, res) => {
