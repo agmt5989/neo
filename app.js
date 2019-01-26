@@ -65,7 +65,7 @@ app.post('/movie/add', (req, res) => {
     let year = req.body.movie_year;
 
     session
-        .run()
+        .run('CREATE (n:Movie)')
         .then()
         .catch();
 
