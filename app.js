@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
             let movieArray = [];
             result.records.forEach((record) => {
                 movieArray.push({
-                    //
+                    id: record.fields[0].identity.low,
                 });
                 console.log(record._fields[0].properties);
             });
