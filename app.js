@@ -76,7 +76,7 @@ app.post('/movie/add', (req, res) => {
 });
 
 app.post('/actor/add', (req, res) => {
-    let name = req.body.actore_name;
+    let name = req.body.actor_name;
 
     session
         .run('CREATE (n:Movie{title: {titleParam}, year: {yearParam}}) RETURN n.title', {titleParam: name, yearParam: year})
