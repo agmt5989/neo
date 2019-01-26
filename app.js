@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
                 });
             });
             res.render('index', {
-                
+                movies: movieArray,
             });
         })
         .catch((err) => {
