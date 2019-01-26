@@ -37,7 +37,9 @@ app.get('/', (req, res) => {
 
             session
                 .run('MATCH (n:Person) return n LIMIT 25')
-                .then()
+                .then((result1) => {
+                    let actorArray = [];
+                })
                 .catch();
             res.render('index', {
                 movies: movieArray,
