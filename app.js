@@ -44,8 +44,8 @@ app.get('/', (req, res) => {
                             id: rec._fields[0].identity.low,
                             name: rec._fields[0].properties.name,
                         });
-
                     });
+
                     res.render('index', {
                         movies: movieArray,
                         actors: actorArray,
