@@ -74,6 +74,22 @@ app.post('/movie/add', (req, res) => {
             console.log(err);
         });
 });
+
+app.post('/actor/add', (req, res) => {
+    let name = req.body.movie_name;
+    let year = req.body.movie_year;
+
+    session
+        .run('CREATE (n:Movie{title: {titleParam}, year: {yearParam}}) RETURN n.title', {titleParam: name, yearParam: year})
+        .then(() => {
+            res.redirect('/');
+            session.close();
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+});
+
 // Setup
 app.listen(3000);
 console.log('Server started on port 3000');
