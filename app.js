@@ -18,7 +18,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
-app.get('/', (req, res) => {});
+app.get('/', (req, res) => {
+    res.send('It did work!!');
+});
 // Setup
 app.listen(3000);
 console.log('Server started on port 3000');
