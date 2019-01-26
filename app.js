@@ -65,7 +65,7 @@ app.post('/movie/add', (req, res) => {
     let year = req.body.movie_year;
 
     console.log(name);
-    
+    res.redirect('/');
 });
 // Setup
 app.listen(3000);
