@@ -19,4 +19,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Setup
 app.listen(3000);
-
+console.log('Server started on port 3000');
