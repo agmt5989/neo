@@ -28,6 +28,9 @@ app.get('/', (req, res) => {
         .then((result) => {
             let movieArray = [];
             result.records.forEach((record) => {
+                movieArray.push({
+                    //
+                });
                 console.log(record._fields[0].properties);
             });
             res.render('index');
