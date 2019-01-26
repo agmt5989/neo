@@ -72,8 +72,6 @@ app.post('/movie/add', (req, res) => {
         .catch((err) => {
             console.log(err);
         });
-
-    res.redirect('/');
 });
 // Setup
 app.listen(3000);
