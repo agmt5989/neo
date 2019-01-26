@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
         .run('MATCH (n:Movie) return n LIMIT 25')
         .then((result) => {
             result.records.forEach((record) => {
-                console.log(record);
+                console.log(record._fields[0].properties);
             });
         })
         .catch((err) => {
