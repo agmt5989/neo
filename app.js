@@ -30,7 +30,9 @@ app.get('/', (req, res) => {
                 console.log(record);
             });
         })
-        .catch();
+        .catch(() => {
+            
+        });
     res.send('It did work!!');
 });
 // Setup
