@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
             });
 
             session
-                .run()
+                .run('MATCH (n:Person) return n LIMIT 25')
                 .then()
                 .catch();
             res.render('index', {
