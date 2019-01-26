@@ -24,7 +24,7 @@ const session = driver.session();
 // Routes
 app.get('/', (req, res) => {
     session
-        .run('MATCH (n:Person) return n LIMIT 25')
+        .run('MATCH (n:Movie) return n LIMIT 25')
         .then((result) => {
             let movieArray = [];
             result.records.forEach((record) => {
