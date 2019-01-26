@@ -8,4 +8,4 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // View Engine
-app.set('views', )
+app.set('views', path.join(__dirname, 'views'));
