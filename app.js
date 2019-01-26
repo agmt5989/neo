@@ -39,7 +39,14 @@ app.get('/', (req, res) => {
                 .run('MATCH (n:Person) return n LIMIT 25')
                 .then((result1) => {
                     let actorArray = [];
-                    result1.records.forEach(() => {});
+                    result1.records.forEach((record) => {
+                        actorArray.push({
+                            id: record._fields[0].identity.low,
+                            title: record._fields[0].properties.title,
+                            year: record._fields[0].properties.year,
+                        });
+
+                    });
                 })
                 .catch();
             res.render('index', {
