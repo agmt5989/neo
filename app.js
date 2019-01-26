@@ -59,6 +59,8 @@ app.get('/', (req, res) => {
             console.log(err);
         });
 });
+
+app.post('/movie/add')
 // Setup
 app.listen(3000);
 console.log('Server started on port 3000');
