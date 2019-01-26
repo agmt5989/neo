@@ -34,7 +34,9 @@ app.get('/', (req, res) => {
                     year: record._fields[0].properties.year,
                 });
             });
-            res.render('index');
+            res.render('index', {
+                
+            });
         })
         .catch((err) => {
             console.log(err);
