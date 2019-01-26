@@ -65,7 +65,10 @@ app.post('/movie/add', (req, res) => {
     let year = req.body.movie_year;
 
     session
-        .run
+        .run()
+        .then()
+        .catch();
+
     res.redirect('/');
 });
 // Setup
