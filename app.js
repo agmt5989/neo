@@ -24,7 +24,7 @@ const session = driver.session();
 // Routes
 app.get('/', (req, res) => {
     session
-        .run('MATCH (n:Movie) return n LIMIT 25')
+        .run('MATCH (n:Actor) return n LIMIT 25')
         .then((result) => {
             result.records.forEach((record) => {
                 console.log(record._fields[0].properties);
