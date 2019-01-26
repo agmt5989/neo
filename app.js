@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
             result.records.forEach((record) => {
                 console.log(record._fields[0].properties);
             });
-            res.send('It did work!!');
+            res.render('index');
         })
         .catch((err) => {
             console.log(err);
