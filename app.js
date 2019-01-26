@@ -30,9 +30,8 @@ app.get('/', (req, res) => {
             result.records.forEach((record) => {
                 movieArray.push({
                     id: record.fields[0].identity.low,
-                    title: 
+                    title: record._fields[0].properties.title,
                 });
-                console.log(record._fields[0].properties);
             });
             res.render('index');
         })
