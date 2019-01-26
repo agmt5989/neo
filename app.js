@@ -24,7 +24,7 @@ const session = driver.session();
 // Routes
 app.get('/', (req, res) => {
     session
-        .run()
+        .run('MATCH (n:Movie) return n LIMIT 25')
         .then()
         .catch();
     res.send('It did work!!');
