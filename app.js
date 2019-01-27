@@ -80,7 +80,7 @@ app.post('/actor/add', (req, res) => {
     let name = req.body.actor_name;
 
     session
-        .run('CREATE (n:Movie{title: {titleParam}, year: {yearParam}}) RETURN n.title', {titleParam: name, yearParam: year})
+        .run('CREATE (n:Person{name: {nameParam}, year: {yearParam}}) RETURN n.title', {titleParam: name, yearParam: year})
         .then(() => {
             res.redirect('/');
             session.close();
