@@ -34,6 +34,7 @@ app.get('/', (req, res) => {
                     year: record._fields[0].properties.year,
                 });
             });
+            console.log(movieArray);
 
             session
                 .run('MATCH (n:Person) return n LIMIT 25')
