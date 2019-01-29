@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
                     });
                     console.log(actorArray);
 
-                    res.render('index', {
+                    res.json({
                         movies: movieArray,
                         actors: actorArray,
                     });
