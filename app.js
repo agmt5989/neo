@@ -34,7 +34,6 @@ app.get('/', (req, res) => {
                     year: record._fields[0].properties.released.low,
                 });
             });
-            console.log(movieArray);
 
             session
                 .run('MATCH (n:Person) return n LIMIT 25')
@@ -46,7 +45,6 @@ app.get('/', (req, res) => {
                             name: rec._fields[0].properties.name,
                         });
                     });
-                    console.log(actorArray);
 
                     res.render('index', {
                         movies: movieArray,
