@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
                 movieArray.push({
                     id: record._fields[0].identity.low,
                     title: record._fields[0].properties.title,
-                    year: record._fields[0].properties.released,
+                    year: record._fields[0].properties.released.low,
                 });
             });
             console.log(movieArray);
@@ -46,6 +46,7 @@ app.get('/', (req, res) => {
                             name: rec._fields[0].properties.name,
                         });
                     });
+                    console.log(actorArray);
 
                     res.render('index', {
                         movies: movieArray,
