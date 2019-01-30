@@ -43,7 +43,8 @@ app.get('/', (req, res) => {
             '            <td>' + 10 * (i + 1) + '</td>\n' +
             '        </tr>');
     }
-    res.write('');
+    res.write('</tbody>\n' +
+        '</table>');
     /*session
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
