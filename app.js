@@ -35,13 +35,13 @@ app.get('/', (req, res) => {
         '        <th>year</th>\n' +
         '    </tr>\n' +
         '    </thead>\n' +
-        '    <tbody>');
+        '    <tbody>\n');
     for (let i = 0; i < 10000; i++) {
         res.write('<tr>\n' +
             '            <td>' + i + 1 + '</td>\n' +
             '            <td>' + 2 * (i + 1) + '</td>\n' +
             '            <td>' + 10 * (i + 1) + '</td>\n' +
-            '        </tr>');
+            '        </tr>\n');
     }
     res.write('</tbody>\n' +
         '</table>');
