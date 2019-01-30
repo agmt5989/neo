@@ -66,7 +66,11 @@ app.post('/movie/add', (req, res) => {
     let tag = req.body.tag;
 
     session
-        .run('CREATE (n:Movie {title: {titleParam}, released: {yearParam}, tagline: {tagParam}}) RETURN n.title', {titleParam: name, yearParam: year, tagParam: tag})
+        .run('CREATE (n:Movie {title: {titleParam}, released: {yearParam}, tagline: {tagParam}}) RETURN n.title', {
+            titleParam: name,
+            yearParam: year,
+            tagParam: tag
+        })
         .then(() => {
             res.redirect('/');
             session.close();
@@ -81,7 +85,10 @@ app.post('/actor/add', (req, res) => {
     let year = req.body.year;
 
     session
-        .run('CREATE (n:Person {name: {nameParam}, born: {yearParam}}) RETURN n.name', {nameParam: name, yearParam: year})
+        .run('CREATE (n:Person {name: {nameParam}, born: {yearParam}}) RETURN n.name', {
+            nameParam: name,
+            yearParam: year
+        })
         .then(() => {
             res.redirect('/');
             session.close();
