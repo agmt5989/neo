@@ -56,12 +56,6 @@ app.get('/', (req, res) => {
             onError: (err) => {
                 console.log(err);
             },
-        })
-        .then(() => {
-
-        })
-        .catch((err) => {
-            console.log(err);
         });
 });
 
