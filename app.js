@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
         res.write('<tr>\n' +
             '            <td>' + i + 1 + '</td>\n' +
             '            <td>' + 2 * (i + 1) + '</td>\n' +
-            '            <td></td>\n' +
+            '            <td>' + 10 * (i + 1) + '</td>\n' +
             '        </tr>');
     }
     /*session
