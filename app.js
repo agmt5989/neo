@@ -32,7 +32,9 @@ app.get('/', (req, res) => {
             onCompleted: () => {
                 session.close();
             },
-            onError: (err) => {},
+            onError: (err) => {
+                console.log(err);
+            },
 
 
         })
