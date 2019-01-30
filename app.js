@@ -35,8 +35,6 @@ app.get('/', (req, res) => {
             onError: (err) => {
                 console.log(err);
             },
-
-
         })
         .then((result) => {
             let movieArray = [];
