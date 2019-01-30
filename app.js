@@ -24,6 +24,7 @@ const session = driver.session();
 // Routes
 app.get('/', (req, res) => {
     let movieArray = [];
+    res.sendStatus(200);
     session
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
@@ -35,7 +36,7 @@ app.get('/', (req, res) => {
                 };
                 movieArray.push(rec);
                 console.log(frec);
-                res.json({x: 'one'});
+                res.send('one');
                 /*session
                     .run('MATCH (n:Person) return n LIMIT 25')
                     .then((result1) => {
@@ -57,6 +58,7 @@ app.get('/', (req, res) => {
                     });*/
             },
             onCompleted: () => {
+                res.end('ok');
                 session.close();
             },
             onError: (err) => {
