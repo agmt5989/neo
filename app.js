@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
                     year: rec._fields[0].properties.released.low,
                 };
                 movieArray.push(rec);
-                console.log(rec);
+                console.log(frec);
                 session
                     .run('MATCH (n:Person) return n LIMIT 25')
                     .then((result1) => {
