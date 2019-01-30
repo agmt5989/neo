@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
             onNext: (rec) => {
+                movieArray.push(rec);
                 console.log(rec);
             },
             onCompleted: () => {
