@@ -30,8 +30,8 @@ app.get('/', (req, res) => {
             onNext: (rec) => {
                 let frec = {
                     id: rec._fields[0].identity.low,
-                    title: record._fields[0].properties.title,
-                    year: record._fields[0].properties.released.low,
+                    title: rec._fields[0].properties.title,
+                    year: rec._fields[0].properties.released.low,
                 };
                 movieArray.push(rec);
                 console.log(rec);
