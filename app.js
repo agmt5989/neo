@@ -45,6 +45,7 @@ app.get('/', (req, res) => {
     }
     res.write('</tbody>\n' +
         '</table>');
+    res.end();
     /*session
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
