@@ -58,8 +58,8 @@ app.get('/', (req, res) => {
                     });*/
             },
             onCompleted: () => {
-                res.end('ok');
                 session.close();
+                res.end('ok');
             },
             onError: (err) => {
                 console.log(err);
