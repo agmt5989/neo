@@ -23,6 +23,7 @@ const session = driver.session();
 
 // Routes
 app.get('/', (req, res) => {
+    let movieArray = [];
     session
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
