@@ -41,13 +41,13 @@
     </tr>
     </thead>
     <tbody>
-        <%movies.forEach((movie) => {%>
-    <tr>
+    <% movies.forEach((movie) => { %>
+        <tr>
             <td><%= movie.id %></td>
             <td><%= movie.title %></td>
             <td><%= movie.year %></td>
-    </tr>
-        <% }) %>
+        </tr>
+    <% }) %>
     </tbody>
 </table>
 
@@ -62,10 +62,10 @@
     </thead>
     <tbody>
     <% actors.forEach((actor) => { %>
-    <tr>
-        <td><%= actor.id %></td>
-        <td><%= actor.name %></td>
-    </tr>
+        <tr>
+            <td><%= actor.id %></td>
+            <td><%= actor.name %></td>
+        </tr>
     <% }) %>
     </tbody>
 </table>
