@@ -29,7 +29,9 @@ app.get('/', (req, res) => {
             onNext: (rec) => {
                 console.log(rec);
             },
-            onCompleted: () => {},
+            onCompleted: () => {
+                session.close();
+            },
 
         })
         .then((result) => {
