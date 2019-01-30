@@ -27,7 +27,15 @@ app.get('/', (req, res) => {
     res.sendStatus(200);
     res.setHeader('Content-Type', 'text/html');
     res.setHeader('Allow-Control-Access-Origin', '*');
-    res.write();
+    res.write('<table>\n' +
+        '    <thead>\n' +
+        '    <tr>\n' +
+        '        <th>id</th>\n' +
+        '        <th>title</th>\n' +
+        '        <th>year</th>\n' +
+        '    </tr>\n' +
+        '    </thead>\n' +
+        '    <tbody>');
     /*session
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
