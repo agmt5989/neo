@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
     for (let i = 0; i < 10000; i++) {
         res.write('<tr>\n' +
             '            <td>' + i + 1 + '</td>\n' +
-            '            <td>' + (i + 1) + '</td>\n' +
+            '            <td>' + 2 * (i + 1) + '</td>\n' +
             '            <td><%= movie.year %></td>\n' +
             '        </tr>');
     }
