@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
         '    <tbody>');
     for (let i = 0; i < 10000; i++) {
         res.write('<tr>\n' +
-            '            <td><%= movie.id %></td>\n' +
+            '            <td>' + i + 1 + '</td>\n' +
             '            <td><%= movie.title %></td>\n' +
             '            <td><%= movie.year %></td>\n' +
             '        </tr>');
