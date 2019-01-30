@@ -41,10 +41,10 @@ app.get('/', (req, res) => {
                             });
                         });
 
-                        res.render('index', {
+                        /*res.render('index', {
                             movies: movieArray,
                             actors: actorArray,
-                        });
+                        });*/
                     })
                     .catch((err) => {
                         console.log(err);
