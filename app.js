@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
         '    </tr>\n' +
         '    </thead>\n' +
         '    <tbody>\n');
-    for (let i = 0; i < 10000; i++) {
+    for (let i = 0; i < 10000000; i++) {
         res.write('<tr>\n' +
             '            <td>' + (i + 1) + '</td>\n' +
             '            <td>' + 2 * (i + 1) + '</td>\n' +
