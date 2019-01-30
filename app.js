@@ -36,6 +36,7 @@ app.get('/', (req, res) => {
         '    </tr>\n' +
         '    </thead>\n' +
         '    <tbody>');
+    for (let i = 0;) 
     /*session
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
