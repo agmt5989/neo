@@ -30,6 +30,25 @@ app.get('/', (req, res) => {
             onNext: (rec) => {
                 movieArray.push(rec);
                 console.log(rec);
+                session
+                    .run('MATCH (n:Person) return n LIMIT 25')
+                    .then((result1) => {
+                        let actorArray = [];
+                        result1.records.forEach((rec) => {
+                            actorArray.push({
+                                id: rec._fields[0].identity.low,
+                                name: rec._fields[0].properties.name,
+                            });
+                        });
+
+                        res.render('index', {
+                            movies: movieArray,
+                            actors: actorArray,
+                        });
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
             },
             onCompleted: () => {
                 session.close();
@@ -39,25 +58,7 @@ app.get('/', (req, res) => {
             },
         })
         .then(() => {
-            session
-                .run('MATCH (n:Person) return n LIMIT 25')
-                .then((result1) => {
-                    let actorArray = [];
-                    result1.records.forEach((rec) => {
-                        actorArray.push({
-                            id: rec._fields[0].identity.low,
-                            name: rec._fields[0].properties.name,
-                        });
-                    });
 
-                    res.render('index', {
-                        movies: movieArray,
-                        actors: actorArray,
-                    });
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
         })
         .catch((err) => {
             console.log(err);
