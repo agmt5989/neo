@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
                 };
                 movieArray.push(rec);
                 console.log(frec);
-                res.send(frec);
+                res.send(Buffer.from('Yahoo'));
                 /*session
                     .run('MATCH (n:Person) return n LIMIT 25')
                     .then((result1) => {
