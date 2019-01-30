@@ -27,6 +27,7 @@ app.get('/', (req, res) => {
     res.sendStatus(200);
     res.setHeader('Content-Type', 'text/html');
     res.setHeader('Allow-Control-Access-Origin', '*');
+    res.write();
     /*session
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
