@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
     session
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
-            onNext: (rec) => 
+            onNext: (rec) => {},
         })
         .then((result) => {
             let movieArray = [];
