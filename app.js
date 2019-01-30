@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
                             movies: movieArray,
                             actors: actorArray,
                         });*/
-                        res.send(rec);
+                        res.send(frec);
                     })
                     .catch((err) => {
                         console.log(err);
