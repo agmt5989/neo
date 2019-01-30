@@ -37,7 +37,11 @@ app.get('/', (req, res) => {
         '    </thead>\n' +
         '    <tbody>');
     for (let i = 0; i < 10000; i++) {
-        res.write();
+        res.write('<tr>\n' +
+            '            <td><%= movie.id %></td>\n' +
+            '            <td><%= movie.title %></td>\n' +
+            '            <td><%= movie.year %></td>\n' +
+            '        </tr>');
     }
     /*session
         .run('MATCH (n:Movie) return n LIMIT 25')
