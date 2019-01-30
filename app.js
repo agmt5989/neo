@@ -25,7 +25,9 @@ const session = driver.session();
 app.get('/', (req, res) => {
     session
         .run('MATCH (n:Movie) return n LIMIT 25')
-        .subscribe({})
+        .subscribe({
+            onNext: 
+        })
         .then((result) => {
             let movieArray = [];
             result.records.forEach((record) => {
