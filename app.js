@@ -35,7 +35,8 @@ app.get('/', (req, res) => {
                 };
                 movieArray.push(rec);
                 console.log(frec);
-                session
+                res.send(frec);
+                /*session
                     .run('MATCH (n:Person) return n LIMIT 25')
                     .then((result1) => {
                         let actorArray = [];
@@ -46,14 +47,14 @@ app.get('/', (req, res) => {
                             });
                         });
 
-                        /*res.render('index', {
+                        /!*res.render('index', {
                             movies: movieArray,
                             actors: actorArray,
-                        });*/
+                        });*!/
                     })
                     .catch((err) => {
                         console.log(err);
-                    });
+                    });*/
             },
             onCompleted: () => {
                 session.close();
