@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
     let movieArray = [];
     res.sendStatus(200);
     res.setHeader('Content-Type', 'text/html');
-    res.setHeader('Allow-Control-Access-Origin', 'text/html');
+    res.setHeader('Allow-Control-Access-Origin', '*');
     /*session
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
