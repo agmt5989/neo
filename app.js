@@ -60,6 +60,44 @@ app.get('/', (req, res) => {
         });
 });
 
+app.get('/batch', (req, res) => {
+    session
+        .run('MATCH (n:Movie) return n LIMIT 25')
+        .then((result) => {
+            let movieArray = [];
+            result.records.forEach((record) => {
+                movieArray.push({
+                    id: record._fields[0].identity.low,
+                    title: record._fields[0].properties.title,
+                    year: record._fields[0].properties.released.low,
+                });
+            });
+
+            session
+                .run('MATCH (n:Person) return n LIMIT 25')
+                .then((result1) => {
+                    let actorArray = [];
+                    result1.records.forEach((rec) => {
+                        actorArray.push({
+                            id: rec._fields[0].identity.low,
+                            name: rec._fields[0].properties.name,
+                        });
+                    });
+
+                    res.render('index', {
+                        movies: movieArray,
+                        actors: actorArray,
+                    });
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+});
+
 app.post('/movie/add', (req, res) => {
     let name = req.body.title;
     let year = req.body.released;
