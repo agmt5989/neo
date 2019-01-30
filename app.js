@@ -45,6 +45,7 @@ app.get('/', (req, res) => {
                             movies: movieArray,
                             actors: actorArray,
                         });*/
+                        res.send(rec);
                     })
                     .catch((err) => {
                         console.log(err);
