@@ -25,6 +25,7 @@ const session = driver.session();
 app.get('/', (req, res) => {
     let movieArray = [];
     res.sendStatus(200);
+    res.setHeader('Content-Type', 'text/html');
     /*session
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
