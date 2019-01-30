@@ -37,15 +37,6 @@ app.get('/', (req, res) => {
             },
         })
         .then(() => {
-            let movieArray = [];
-            result.records.forEach((record) => {
-                movieArray.push({
-                    id: record._fields[0].identity.low,
-                    title: record._fields[0].properties.title,
-                    year: record._fields[0].properties.released.low,
-                });
-            });
-
             session
                 .run('MATCH (n:Person) return n LIMIT 25')
                 .then((result1) => {
