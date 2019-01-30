@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
                 console.log(err);
             },
         })
-        .then((result) => {
+        .then(() => {
             let movieArray = [];
             result.records.forEach((record) => {
                 movieArray.push({
