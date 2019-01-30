@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
             onNext: (rec) => {
+                let frec = {id: rec._fields[0].identity.low,}
                 movieArray.push(rec);
                 console.log(rec);
                 session
