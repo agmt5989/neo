@@ -24,7 +24,7 @@ const session = driver.session();
 // Routes
 app.get('/', (req, res) => {
     let movieArray = [];
-    res.sendStatus(200);
+    // res.sendStatus(200);
     res.setHeader('Content-Type', 'text/html');
     res.setHeader('Allow-Control-Access-Origin', '*');
     res.write('<table>\n' +
