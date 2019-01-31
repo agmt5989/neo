@@ -63,8 +63,8 @@ app.get('/', (req, res) => {
                     .subscribe({
                         onNext: (p) => {
                             let fp = {
-                                id: rec._fields[0].identity.low,
-                                name: rec._fields[0].properties.name,
+                                id: p._fields[0].identity.low,
+                                name: p._fields[0].properties.name,
                             };
                         },
                     });
