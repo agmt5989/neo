@@ -24,7 +24,7 @@ const session = driver.session();
 // Routes
 app.get('/', (req, res) => {
     let movieArray = [];
-    // res.sendStatus(200);
+    /*// res.sendStatus(200);
     res.setHeader('Content-Type', 'text/html');
     res.setHeader('Allow-Control-Access-Origin', '*');
     res.write('<table>\n' +
@@ -45,8 +45,8 @@ app.get('/', (req, res) => {
     }
     res.write('</tbody>\n' +
         '</table>');
-    res.end();
-    /*session
+    res.end();*/
+    session
         .run('MATCH (n:Movie) return n LIMIT 25')
         .subscribe({
             onNext: (rec) => {
@@ -58,7 +58,7 @@ app.get('/', (req, res) => {
                 movieArray.push(rec);
                 console.log(frec);
                 res.write('one');
-                /!*session
+                /*session
                     .run('MATCH (n:Person) return n LIMIT 25')
                     .then((result1) => {
                         let actorArray = [];
@@ -76,7 +76,7 @@ app.get('/', (req, res) => {
                     })
                     .catch((err) => {
                         console.log(err);
-                    });*!/
+                    });*/
             },
             onCompleted: () => {
                 session.close();
@@ -85,7 +85,7 @@ app.get('/', (req, res) => {
             onError: (err) => {
                 console.log(err);
             },
-        });*/
+        });
 });
 
 app.get('/batch', (req, res) => {
