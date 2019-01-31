@@ -58,22 +58,6 @@ app.get('/', (req, res) => {
                 movieArray.push(rec);
                 console.log(frec);
                 res.write(JSON.stringify(frec) + '\n\n');
-                session
-                    .run('MATCH (n:Person) return n LIMIT 25')
-                    .subscribe({
-                        onNext: (p) => {
-                            let fp = {
-                                id: p._fields[0].identity.low,
-                                name: p._fields[0].properties.name,
-                            };
-                            console.log(fp);
-                            res.write(JSON.stringify(fp));
-                        },
-                        onCompleted: ()=>{},
-                        onError: (e) => {
-                            console.log(e);
-                        },
-                    });
                 /*session
                     .run('MATCH (n:Person) return n LIMIT 25')
                     .then((result1) => {
@@ -95,6 +79,22 @@ app.get('/', (req, res) => {
                     });*/
             },
             onCompleted: () => {
+                session
+                    .run('MATCH (n:Person) return n LIMIT 25')
+                    .subscribe({
+                        onNext: (p) => {
+                            let fp = {
+                                id: p._fields[0].identity.low,
+                                name: p._fields[0].properties.name,
+                            };
+                            console.log(fp);
+                            res.write(JSON.stringify(fp));
+                        },
+                        onCompleted: ()=>{},
+                        onError: (e) => {
+                            console.log(e);
+                        },
+                    });
                 session.close();
                 res.end();
             },
