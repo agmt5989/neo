@@ -88,7 +88,7 @@ app.get('/', (req, res) => {
                                 name: p._fields[0].properties.name,
                             };
                             console.log(fp);
-                            res.write(JSON.stringify(fp));
+                            res.write(JSON.stringify(fp) + '\n\n');
                         },
                         onCompleted: () => {
                             session.close();
