@@ -58,6 +58,8 @@ app.get('/', (req, res) => {
                 movieArray.push(rec);
                 console.log(frec);
                 res.write(JSON.stringify(frec) + '\n\n');
+                session
+                    .run('MATCH (n:Person) return n LIMIT 25')
                 /*session
                     .run('MATCH (n:Person) return n LIMIT 25')
                     .then((result1) => {
