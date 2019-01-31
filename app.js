@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
                 session
                     .run('MATCH (n:Person) return n LIMIT 25')
                     .subscribe({
-                        
+                        onNext: 
                     });
                 /*session
                     .run('MATCH (n:Person) return n LIMIT 25')
