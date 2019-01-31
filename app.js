@@ -66,6 +66,7 @@ app.get('/', (req, res) => {
                                 id: p._fields[0].identity.low,
                                 name: p._fields[0].properties.name,
                             };
+                            console.log(fp);
                         },
                     });
                 /*session
