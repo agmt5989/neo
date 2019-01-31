@@ -90,7 +90,7 @@ app.get('/', (req, res) => {
                             console.log(fp);
                             res.write(JSON.stringify(fp));
                         },
-                        onCompleted: ()=>{
+                        onCompleted: () => {
                             session.close();
                             res.end();
                             },
