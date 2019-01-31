@@ -80,7 +80,7 @@ app.get('/', (req, res) => {
             },
             onCompleted: () => {
                 session
-                    .run('MATCH (n:Person) return n LIMIT 25')
+                    .run('MATCH (n:Person) return n LIMIT 250')
                     .subscribe({
                         onNext: (p) => {
                             let fp = {
