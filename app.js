@@ -69,7 +69,7 @@ app.get('/', (req, res) => {
                             console.log(fp);
                             res.write(JSON.stringify(fp));
                         },
-                        onCompleted
+                        onCompleted: ()=>{},
                     });
                 /*session
                     .run('MATCH (n:Person) return n LIMIT 25')
