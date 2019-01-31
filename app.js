@@ -71,7 +71,7 @@ app.get('/', (req, res) => {
                         },
                         onCompleted: ()=>{},
                         onError: (e) => {
-                            
+                            console.log(e);
                         },
                     });
                 /*session
