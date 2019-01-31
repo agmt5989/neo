@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
         '</table>');
     res.end();*/
     session
-        .run('MATCH (n:Movie) return n LIMIT 25')
+        .run('MATCH (n:Movie) return n LIMIT 250')
         .subscribe({
             onNext: (rec) => {
                 let frec = {
