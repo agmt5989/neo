@@ -60,6 +60,7 @@ app.get('/', (req, res) => {
                 res.write(JSON.stringify(frec) + '\n\n');
                 session
                     .run('MATCH (n:Person) return n LIMIT 25')
+                    .subscribe();
                 /*session
                     .run('MATCH (n:Person) return n LIMIT 25')
                     .then((result1) => {
