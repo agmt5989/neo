@@ -57,7 +57,7 @@ app.get('/', (req, res) => {
                 };
                 movieArray.push(rec);
                 console.log(frec);
-                res.write(JSON.Stringify(frec) + '\n\n');
+                res.write(JSON.stringify(frec) + '\n\n');
                 /*session
                     .run('MATCH (n:Person) return n LIMIT 25')
                     .then((result1) => {
