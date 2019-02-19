@@ -115,7 +115,7 @@ app.post('/register', (req, res) => {
     let email = req.body.email;
     let phone = req.body.phone;
     session
-        .run('CREATE (a:Person {firstname: {fParam}, lastname: {lParam}}), (b:Email {value: {emParam}}), ()', {fParam: fname, lParam: lname, emParam: email, phParam: phone})
+        .run('CREATE (a:Person {firstname: {fParam}, lastname: {lParam}}), (b:Email {value: {emParam}}), (c:Phone {{}})', {fParam: fname, lParam: lname, emParam: email, phParam: phone})
         .then()
         .catch();
 });
