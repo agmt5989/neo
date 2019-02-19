@@ -112,6 +112,7 @@ app.get('/register', (req, res) => {
 app.post('/register', (req, res) => {
     let fname = req.body.fname;
     let lname = req.body.lname;
+    let lname = req.body.lname;
     session
         .run('CREATE (a:Person {firstname: {fParam}, lastname: {lParam}}), (b:Email {value: {emParam}})', {fParam: fname, lParam: lname})
         .then()
