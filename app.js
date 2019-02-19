@@ -106,7 +106,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/register', (req, res) => {
-    res.render('reg');
+    res.render('reg' {success: false});
 });
 
 app.post('/register', (req, res) => {
