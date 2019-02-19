@@ -109,6 +109,8 @@ app.get('/register', (req, res) => {
     res.render('reg');
 });
 
+app.post('/register')
+
 app.get('/batch', (req, res) => {
     session
         .run('MATCH (n:Movie) return n LIMIT 25')
