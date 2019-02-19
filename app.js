@@ -115,7 +115,7 @@ app.post('/register', (req, res) => {
     let email = req.body.email;
     let phone = req.body.phone;
     let dt = (new Date()).toString();
-    console.log(dt);
+    // console.log(dt);
     session
         .run('CREATE (a:Person {firstname: {fParam}, lastname: {lParam}, dateadded: {dtParam}}), (b:Email {value: {emParam}}), (c:Phone {value: {phParam}}), (a)-[:HAS {date: {dtParam}}]->(b), (a)-[:HAS {date: {dtParam}}]->(c) RETURN a, b, c', {fParam: fname, lParam: lname, emParam: email, phParam: phone, dtParam: dt})
         .then(() => {
