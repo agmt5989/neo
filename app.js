@@ -113,7 +113,7 @@ app.post('/register', (req, res) => {
     let fname = req.body.fname;
     let lname = req.body.lname;
     let email = req.body.email;
-    let phone = req.body.email;
+    let phone = req.body.phone;
     session
         .run('CREATE (a:Person {firstname: {fParam}, lastname: {lParam}}), (b:Email {value: {emParam}})', {fParam: fname, lParam: lname})
         .then()
