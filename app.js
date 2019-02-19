@@ -111,7 +111,7 @@ app.get('/register', (req, res) => {
 
 app.post('/register', (req, res) => {
     session
-        .run()
+        .run('CREATE')
         .then()
         .catch();
 });
