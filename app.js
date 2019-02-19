@@ -56,7 +56,7 @@ app.get('/', (req, res) => {
                     year: rec._fields[0].properties.released.low,
                 };
                 movieArray.push(rec);
-                console.log(frec);
+                // console.log(frec);
                 res.write(JSON.stringify(frec) + '\n\n');
                 /*session
                     .run('MATCH (n:Person) return n LIMIT 25')
