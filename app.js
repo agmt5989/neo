@@ -123,7 +123,7 @@ app.post('/register', (req, res) => {
         })
         .catch((err) => {
             console.log(err);
-            res.render('reg', {error: true});
+            res.render('reg', {success: false, error: true});
         });
 });
 
