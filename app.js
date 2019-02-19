@@ -121,7 +121,7 @@ app.post('/register', (req, res) => {
         .then()
         .catch((err) => {
             console.log(err);
-            res.render('reg', )
+            res.render('reg', {error: true})
         });
 });
 
