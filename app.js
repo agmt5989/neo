@@ -112,6 +112,7 @@ app.get('/register', (req, res) => {
 app.post('/register', (req, res) => {
     session
         .run()
+        .then()
 });
 
 app.get('/batch', (req, res) => {
