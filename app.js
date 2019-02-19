@@ -106,7 +106,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/register', (req, res) => {
-    res.render();
+    res.render('reg');
 });
 
 app.get('/batch', (req, res) => {
