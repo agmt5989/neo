@@ -105,7 +105,7 @@ app.get('/', (req, res) => {
         });
 });
 
-app.get('/register', (req, res) => {})
+app.get('/register', (req, res) => {});
 
 app.get('/batch', (req, res) => {
     session
