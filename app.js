@@ -113,6 +113,7 @@ app.post('/register', (req, res) => {
     session
         .run()
         .then()
+        .completed()
 });
 
 app.get('/batch', (req, res) => {
