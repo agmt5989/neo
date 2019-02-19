@@ -119,7 +119,7 @@ app.post('/register', (req, res) => {
     session
         .run('CREATE (a:Person {firstname: {fParam}, lastname: {lParam}, dateadded: {dtParam}}), (b:Email {value: {emParam}}), (c:Phone {value: {phParam}}), (a)-[:HAS {date: {dtParam}}]->(b), (a)-[:HAS {date: {dtParam}}]->(c) RETURN a, b, c', {fParam: fname, lParam: lname, emParam: email, phParam: phone, dtParam: dt})
         .then(() => {
-            res.render('reg', {success: true});
+            res.render('reg', {success: true, error: false});
         })
         .catch((err) => {
             console.log(err);
