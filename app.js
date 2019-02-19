@@ -111,7 +111,7 @@ app.get('/register', (req, res) => {
 
 app.post('/register', (req, res) => {
     session
-        .run('CREATE (a:Person {firstname: {fParam}})')
+        .run('CREATE (a:Person {firstname: {fParam}, firstname: {lParam}})')
         .then()
         .catch();
 });
