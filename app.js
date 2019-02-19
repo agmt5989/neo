@@ -109,7 +109,9 @@ app.get('/register', (req, res) => {
     res.render('reg');
 });
 
-app.post('/register', (req, res) => {});
+app.post('/register', (req, res) => {
+    session
+});
 
 app.get('/batch', (req, res) => {
     session
